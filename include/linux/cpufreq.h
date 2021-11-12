@@ -35,8 +35,11 @@
 #define CPUFREQ_NAME_LEN		16
 /* Print length for names. Extra 1 space for accomodating '\n' in prints */
 #define CPUFREQ_NAME_PLEN		(CPUFREQ_NAME_LEN + 1)
-
-struct cpufreq_governor;
+struct cpufreq_govinfo {
+ 	unsigned int cpu;
+ 	unsigned int load;
+ 	unsigned int sampling_rate_us;
+};
 
 struct cpufreq_freqs {
 	unsigned int cpu;	/* cpu nr */
