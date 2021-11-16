@@ -86,6 +86,11 @@ struct cpufreq_govinfo {
  unsigned int load;
  unsigned int sampling_rate_us;
 };
+struct govinfo {
+ unsigned int cpu;
+ unsigned int load;
+ unsigned int sampling_rate_us;
+};
 struct input_events {
 	unsigned int evt_x_cnt;
 	unsigned int evt_y_cnt;
