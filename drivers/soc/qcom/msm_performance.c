@@ -81,7 +81,11 @@ struct cluster {
 	struct timer_list mode_exit_timer;
 	struct timer_list perf_cl_peak_mode_exit_timer;
 };
-
+struct cpufreq_govinfo {
+ unsigned int cpu;
+ unsigned int load;
+ unsigned int sampling_rate_us;
+};
 struct input_events {
 	unsigned int evt_x_cnt;
 	unsigned int evt_y_cnt;
