@@ -24,7 +24,11 @@
 #include <trace/events/sched.h>
 
 #define MAX_CPUS_PER_GROUP 4
-
+struct cpufreq_govinfo {
+ unsigned int cpu;
+ unsigned int load;
+ unsigned int sampling_rate_us;
+};
 struct cpu_data {
 	/* Per CPU data. */
 	bool	inited;
